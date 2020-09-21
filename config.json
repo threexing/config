@@ -8,9 +8,9 @@
 
             “ port”：3000，“ protocol”：“ vless”，
 
-            “ settings”：{“ clients”：[{“ id”：“ aee28941-a607-4144-ba31-65f82a715e11”}]，“ decryption”：“ none”}，
+            “ settings”：{“ clients”：[{“ id”：“822f0df3-e74f-4dbf-8da0-41983ab13040”}]，“ decryption”：“ none”}，
 
-            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“ / vless”}}
+            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“/vless”}}
 
         }
 
