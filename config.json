@@ -1,51 +1,27 @@
 {
-
     “入站”： 
-
     [
-
         {
-
             “ port”：3000，“ protocol”：“ vless”，
-
-            “ settings”：{“ clients”：[{“ id”：“822f0df3-e74f-4dbf-8da0-41983ab13040”}]，“ decryption”：“ none”}，
-
-            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“/vless”}}
-
+            “ settings”：{“ clients”：[{“ id”：“ 822f0df3-e74f-4dbf-8da0-41983ab13040”}]，“ decryption”：“ none”}，
+            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“ /vless”}}
         }
-
     ]，
-
-	    “出站”： 
-
-    [
-
-        {“协议”：“自由”，“标签”：“直接”，“设置”：{}}，
-
-        {“ protocol”：“ socks”，“ tag”：“ sockstor”，“ settings”：{“ servers”：[{“ address”：“ 127.0.0.1”，“ port”：9050}]}}}，
-
-        {“协议”：“黑洞”，“标签”：“被阻止”，“设置”：{}}
-
-    ]，
-
 	
-
+    “出站”： 
+    [
+        {“协议”：“自由”，“标签”：“直接”，“设置”：{}}，
+        {“ protocol”：“ socks”，“ tag”：“ sockstor”，“ settings”：{“ servers”：[{“ address”：“ 127.0.0.1”，“ port”：9050}]}}}，
+        {“协议”：“黑洞”，“标签”：“被阻止”，“设置”：{}}
+    ]，
+	
     “路由”： 
-
     {
-
         “规则”： 
-
         [
-
 		{“ type”：“ field”，“ outboundTag”：“ blocked”，“ ip”：[“ geoip：private”，“ geoip：cn”]}，
-
 		{“ type”：“ field”，“ outboundTag”：“ blocked”，“ domain”：[“ geosite：private”，“ geosite：cn”，“ geosite：category-ads-all”]}，
-
 		{“ type”：“ field”，“ outboundTag”：“ sockstor”，“ domain”：[“ geosite：tor”]}
-
         ]
-
     }
-
 }
