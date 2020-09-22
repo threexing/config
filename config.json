@@ -3,8 +3,8 @@
     [
         {
             "port": 3000,"protocol": "vless",
-            "settings": {"clients": [{"id": "7ba9fc65-5420-4e98-931c-97d8fda8fcd0"}],"decryption": "none"},
-            "streamSettings": {"network": "ws","wsSettings": {"path": "/"}}
+            "settings": {"clients": [{"id": "822f0df3-e74f-4dbf-8da0-41983ab13040"}],"decryption": "none"},
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/appstore"}}
         }
     ],
 	
