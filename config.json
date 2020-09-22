@@ -2,9 +2,9 @@
     “入站”： 
     [
         {
-            “ port”：3000，“ protocol”：“ vless”，
+            “ port”:3000，“ protocol”：“ vless”，
             “ settings”：{“ clients”：[{“ id”：“ 822f0df3-e74f-4dbf-8da0-41983ab13040”}]，“ decryption”：“ none”}，
-            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“ /vless”}}
+            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“ / vless”}}
         }
     ]，
 	
