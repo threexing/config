@@ -1,27 +1,58 @@
 {
-    "inbounds": 
-    [
-        {
-            "port": 3000,"protocol": "vless",
-            "settings": {"clients": [{"id": "1f0d5e4c-b537-4a02-8254-c00fe5077726"}],"decryption": "none"},
-            "streamSettings": {"network": "ws","wsSettings": {"path": "/appstore"}}
-        }
-    ],
-	
-    "outbounds": 
-    [
-        {"protocol": "freedom","tag": "direct","settings": {}},
-        {"protocol": "socks","tag": "sockstor","settings": {"servers": [{"address": "127.0.0.1","port": 9050}]}},
-        {"protocol": "blackhole","tag": "blocked","settings": {}}
-    ],
-	
-    "routing": 
+  "log": {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "warning"
+  },
+  "dns": {},
+  "stats": {},
+  "inbounds": [
     {
-        "rules": 
-        [
-		{"type": "field","outboundTag": "blocked","ip": ["geoip:private","geoip:cn"]},
-		{"type": "field","outboundTag": "blocked","domain": ["geosite:private","geosite:cn","geosite:category-ads-all"]},
-		{"type": "field","outboundTag": "sockstor","domain": ["geosite:tor"]}
+      "port": 8888,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
+            "alterId": 0
+          }
         ]
+      },
+      "tag": "in-0",
+      "streamSettings": {
+        "network": "tcp",
+        "security": "auto",
+        "wsSettings": {
+          "path": "/"
+        }
+      }
     }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "blocked",
+      "protocol": "blackhole",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked"
+      }
+    ]
+  },
+  "policy": {},
+  "reverse": {},
+  "transport": {}
 }
