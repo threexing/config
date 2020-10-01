@@ -3,7 +3,7 @@
     [
         {
             "port": 8888,"protocol": "vless",
-            "settings": {"clients": [{"id": "df3ffb3e-9801-404a-a9d8-fbfc9bb0a6f2"}],"decryption": "none"},
+            "settings": {"clients": [{"id": "6c61411d-57a3-40f3-aaa9-12badc33452c"}],"decryption": "none"},
             "streamSettings": {"network": "ws","wsSettings": {"path": "/2333"}}
         }
     ],
